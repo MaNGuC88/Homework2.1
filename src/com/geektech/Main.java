@@ -3,11 +3,11 @@ package com.geektech;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(ageAndTemperature(15, -30));
-        System.out.println(ageAndTemperature(33, 0));
-        System.out.println(ageAndTemperature(28, 15));
-        System.out.println(ageAndTemperature(5, 20));
-        System.out.println(ageAndTemperature(3, 25));
+        System.out.println(ageAndTemperature(generateRandomAge(), -30));
+        System.out.println(ageAndTemperature(generateRandomAge(), 0));
+        System.out.println(ageAndTemperature(generateRandomAge(), 15));
+        System.out.println(ageAndTemperature(generateRandomAge(), 20));
+        System.out.println(ageAndTemperature(generateRandomAge(), 25));
     }
 
     public static String ageAndTemperature(int ageOfPerson, int outsideTemperature) {
@@ -21,4 +21,10 @@ public class Main {
             return "Оставайтесь дома";
     }
 
+    public static int generateRandomAge () {
+        int a = 0;
+        int b = 100;
+        int random = a + (int) (Math.random() * b);
+        return random;
+    }
 }
